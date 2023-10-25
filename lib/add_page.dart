@@ -31,7 +31,7 @@ class AddPage extends StatelessWidget {
                 // ボタン2がタップされた場合のアクションを実行
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => kougiPage()),
+                  MaterialPageRoute(builder: (context) => AssignPage()),
                 );
               },
               child: Text('講義'),

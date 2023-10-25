@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pbl_project/add_page.dart';
 import 'bottom_navigation_bar_widget.dart'; // 共通のボトムナビゲーションバーウィジェットをインポート
 
-class kougiPage extends StatelessWidget {
+class AssignPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class kougiPage extends StatelessWidget {
           } else if (index == 2) {
             // その他のボタンに関連するアクション
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => kougiPage()));
+                context, MaterialPageRoute(builder: (context) => AssignPage()));
           }
           ;
         },
