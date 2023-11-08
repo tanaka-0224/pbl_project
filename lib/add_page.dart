@@ -34,7 +34,7 @@ class AddPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => AssignPage()),
                 );
               },
-              child: Text('講義★'),
+              child: Text('講義'),
             ),
           ],
         ),
