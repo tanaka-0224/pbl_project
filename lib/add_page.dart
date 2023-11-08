@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbl_project/kougi.dart';
+import 'package:pbl_project/assign.dart';
 import 'package:pbl_project/search_page.dart';
 import 'package:pbl_project/syuukatu.dart';
 import 'bottom_navigation_bar_widget.dart'; // 共通のボトムナビゲーションバーウィジェットをインポート
