@@ -23,7 +23,16 @@ git add .
 コミットする
 git commit -m "コメント書く"
 リモートに加えるためにプッシュする
-git push origin main
+git push origin プッシュしたいブランチ
+
+git checkout 変わりたい場所
+自分の場所を変える
+
+git pull
+自分がいる場所からローカルに持ってくる
+
+git checkout -b ブランチの名前
+自分の場所をブランチに変える
 
 '''
 
