@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'add_page.dart'; // AddPageをインポート
 import 'search_page.dart'; // SearchPageをインポート
+import 'package:pbl_project/providers/selected_data_provider.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyHomePage(),
+    return ChangeNotifierProvider(
+      create: (context) => SelectedDataProvider(),
+      child: MaterialApp(
+        home: MyHomePage(),
+      ),
     );
   }
 }
