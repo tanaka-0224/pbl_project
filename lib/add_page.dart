@@ -4,8 +4,6 @@ import 'package:pbl_project/search_page.dart';
 import 'package:pbl_project/syuukatu.dart';
 import 'bottom_navigation_bar_widget.dart'; // 共通のボトムナビゲーションバーウィジェットをインポート
 
-//変更箇所 aaaaaaaaaaaa
-
 class AddPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
