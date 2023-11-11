@@ -11,7 +11,7 @@ class AddPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('★Add Page★'),
+        title: Text('Add Page'),
       ),
       body: Center(
         child: Column(
