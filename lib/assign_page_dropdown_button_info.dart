@@ -19,7 +19,7 @@ class _AssignPageDropdownButtonInfo
   @override
   Widget build(BuildContext context) {
     return DropdownButton<int>(
-      value: _selectedValue ?? widget.currentIndex,
+      value: _selectedValue ?? -1,
       onChanged: (int? newValue) {
         setState(() {
           _selectedValue = newValue;
@@ -32,11 +32,20 @@ class _AssignPageDropdownButtonInfo
       },
       items: <DropdownMenuItem<int>>[
         DropdownMenuItem<int>(
+          value: -1,
+          child: Row(
+            children: [
+              SizedBox(width: 8.0),
+              Text('ーーー'),
+            ],
+          ),
+        ),
+        DropdownMenuItem<int>(
           value: 0,
           child: Row(
             children: [
               SizedBox(width: 8.0),
-              Text('Add'),
+              Text('電気'),
             ],
           ),
         ),

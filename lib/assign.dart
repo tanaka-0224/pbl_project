@@ -3,35 +3,44 @@ import 'package:pbl_project/add_page.dart';
 import 'bottom_navigation_bar_widget.dart';
 import 'assign_page_dropdown_button_subject.dart';
 import 'assign_page_dropdown_button_info.dart';
+import 'post_page.dart'; // PostPage のインポート
 
-class AssignPage extends StatelessWidget {
+class AssignPage extends StatefulWidget {
+  @override
+  _AssignPageState createState() => _AssignPageState();
+}
+
+class _AssignPageState extends State<AssignPage> {
+  int _selectedSubject = -1;
+  int _selectedInfo = -1;
+
   @override
   Widget build(BuildContext context) {
+    bool isNextButtonEnabled = _selectedSubject != -1 && _selectedInfo != -1;
+
     return Scaffold(
       appBar: AppBar(
-<<<<<<< HEAD
         title: Text('Assign Page'),
-=======
-        title: Text('kougi Page'),
->>>>>>> 3c6155a894ebcacf4633b2b87969193a8ebcc307
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AssignPageDropdownButtonSubject(
-              currentIndex: 0,
+              currentIndex: _selectedSubject,
               onTap: (index) {
-                // Handle the selection of the subject dropdown menu
-                // You can add your logic here based on the selected index
+                setState(() {
+                  _selectedSubject = index;
+                });
               },
             ),
             SizedBox(height: 16.0), // Add some space between the dropdowns
             AssignPageDropdownButtonInfo(
-              currentIndex: 0,
+              currentIndex: _selectedInfo,
               onTap: (index) {
-                // Handle the selection of the info dropdown menu
-                // You can add your logic here based on the selected index
+                setState(() {
+                  _selectedInfo = index;
+                });
               },
             ),
           ],
@@ -55,6 +64,24 @@ class AssignPage extends StatelessWidget {
           }
         },
       ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 16.0, right: 16.0),
+        child: FloatingActionButton(
+          onPressed: isNextButtonEnabled
+              ? () {
+                  // Next ボタンが押されたときの処理
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PostPage(), // PostPage に遷移
+                    ),
+                  );
+                }
+              : null, // ボタンが無効の場合は null を設定
+          child: Icon(Icons.arrow_forward),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
