@@ -7,7 +7,7 @@ class AssignPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('kougi Page'),
+        title: Text('assign Page'),
       ),
       body: Center(
         child: Text('This is the content of the syuukatu page.'),
