@@ -4,7 +4,12 @@ import 'add_page.dart'; // AddPageをインポート
 import 'search_page.dart'; // SearchPageをインポート
 import 'package:pbl_project/providers/selected_data_provider.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => SelectedDataProvider())
+      ],
+      child: MyApp(),
+    ));
 
 class MyApp extends StatelessWidget {
   @override
